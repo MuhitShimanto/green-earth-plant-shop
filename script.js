@@ -39,7 +39,7 @@ function loadPlants(categoryData) {
                   />
                 </figure>
                 <div class="body space-y-2">
-                  <h2 class="card-title inter font-semibold text-[14px] text-[#1F2937]">${plantInfo.name}</h2>
+                  <button class="card-title inter font-semibold text-[14px] text-[#1F2937]" onclick="loadDetails(${plantInfo.id})">${plantInfo.name}</button>
                   <p class="inter font-light text-[12px] text-[#1F2937] h-[110px]">${plantInfo.description}</p>
                   <div class="price-div flex justify-between">
                     <div class="badge badge-outline geist font-medium text-[14px] text-[#15803D] bg-[#DCFCE7]">${plantInfo.category}</div>
@@ -52,6 +52,26 @@ function loadPlants(categoryData) {
         plantContainer.append(newCard);
       });
   }
+}
+// Load Details
+function loadDetails(plantId) {
+  fetch(`https://openapi.programming-hero.com/api/plant/${plantId}`).then(res=>res.json()).then(data=>{
+    showDetails(data.plants);
+  })
+}
+function showDetails(plantObj) {
+  console.log(plantObj)
+  const detailsContainer = document.getElementById('details-container');
+  detailsContainer.innerHTML = `
+  <h2 class="inter font-bold text-[20px]">${plantObj.name}</h2>
+  <img class="rounded-xl h-[350px] w-full object-cover" src="${plantObj.image}"></img>
+  <p><span class="inter font-bold">Category:</span> ${plantObj.category}</p>
+  <p><span class="inter font-bold">Price:</span> ৳ ${plantObj.price}</p>
+  <p><span class="inter font-bold">Description:</span> ${plantObj.description}</p>
+  `
+  document.getElementById('detailsModal').showModal();
+
+
 }
 // All Category
 function getAllCategoryId() {
