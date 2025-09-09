@@ -438,7 +438,31 @@
           </div>
         </div>
       </section>
-      
+      <section class="w-full bg-[#166534] py-15 flex flex-col justify-center items-center">
+        <h2 class="pb-5 text-center inter font-semibold text-[24px] lg:text-[32px] text-white">
+          Plant a Tree Today
+        </h2>
+        <form class="p-[20px] lg:p-[40px] w-[380px] lg:w-[650px] flex flex-col bg-[#15803D] rounded-xl">
+          <fieldset class="space-y-3">
+            <label for="name"></label>
+            <input type="text" name="name" id="name" placeholder="You Name" class="inter font-normal text-[16px] text-[#1F2937] w-full bg-white p-2 rounded-lg outline-none border-none" />
+            <label for="email"></label>
+            <input type="email" name="email" id="email" placeholder="You Email Address" class="inter font-normal text-[16px] text-[#1F2937] w-full bg-white p-2 rounded-lg outline-none border-none" />
+            <label for="quantity"></label>
+            <select name="quantity" id="quantity" class="inter font-normal text-[16px] text-[#1F2937] w-full bg-white p-2 rounded-lg outline-none border-none">
+              <option value="0">Number of Trees</option>
+              <option value="5">5 Trees</option>
+              <option value="10">10 Trees</option>
+              <option value="20">20 Trees</option>
+              <option value="50">50 Trees</option>
+            </select>
+            <a href="#"
+              class="btn rounded-4xl bg-[#FACC15] hover:bg-[#FACC15]/85 text-[#15803D] border-none w-full inter font-medium text-[16px]"
+              >Donate Now</a
+            >
+          </fieldset>
+        </form>
+      </section>
     </main>
     <footer class="h-[72px] w-full bg-[#14532D] flex justify-center items-center text-white">
         <p>&copy;&nbsp;2025 Green Earth. All Rights Reserved.</p>
