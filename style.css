@@ -4,3 +4,8 @@
 .geist {
   font-family: "Geist", sans-serif;
 }
+.active {
+  background-color: #15803D;
+  color: white;
+  border-radius: 5px;
+}

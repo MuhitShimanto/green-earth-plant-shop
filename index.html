@@ -96,7 +96,9 @@
           <h1 class="inter text-[#1F2937] font-bold text-[30px] lg:text-[60px]">
             Plant a Tree, Grow a Future
           </h1>
-          <p class="w-[300px] text-[#1F2937] inter font-light text-[12px] lg:text-[16px]">
+          <p
+            class="w-[300px] text-[#1F2937] inter font-light text-[12px] lg:text-[16px]"
+          >
             Join our mission to plant 1 million trees and make the Earth greener
             for future generations.
           </p>
@@ -116,37 +118,37 @@
         </h2>
         <div class="container grid grid-cols-1 lg:grid-cols-6 space-y-5">
           <div class="categories col-span-1 lg:col-span-1 space-y-2">
-            <p class="inter font-semibold text-[16px] lg:text-[20px] text-black">Categories</p>
-            <div id="category-container" class="space-y-2">
+            <p
+              class="inter font-semibold text-[16px] lg:text-[20px] text-black"
+            >
+              Categories
+            </p>
+            <div id="category-container">
               <!-- Categories Load Here -->
+               <span class="loading loading-spinner loading-lg mx-auto"></span>
+               
             </div>
           </div>
           <div class="plant-cards col-span-1 lg:col-span-4">
-            <div id="plant-card-container" class="grid grid-cols-1 lg:grid-cols-3 gap-3 px-0 lg:px-3">
-              <!-- Plant Cards Load Here -->              
+            <div
+              id="plant-card-container"
+              class="grid grid-cols-1 lg:grid-cols-3 gap-3 px-0 lg:px-3"
+            >
+              <!-- Plant Cards Load Here -->
+               <span class="loading loading-spinner  loading-lg col-span-1 lg:col-span-3 mx-auto"></span>
             </div>
           </div>
           <div class="cart col-span-1 bg-white rounded-2xl space-y-5 p-4">
             <h2 class="inter font-semibold text-[20px]">Your Cart</h2>
-            <!-- Cart Items -->
-            <div
-              class="cart-item w-full p-[8px] bg-[#F0FDF4] flex justify-between items-center rounded-md"
-            >
-              <div>
-                <p class="inter font-semibold text-[14px]">Mango Tree</p>
-                <p class="inter font-normal text-[16px] text-[#1F2937]/60">
-                  $500 x <span>1</span>
-                </p>
-              </div>
-              <i class="fa-solid fa-xmark"></i>
+            <div id="cart-item-container">
+              <!-- Cart Items Load Here -->
             </div>
-            <!-- Cart Items End -->
             <div class="border-[0.5px] border-[#1F2937]/50 rounded-2xl"></div>
             <div
               class="total-calc flex justify-between inter font-medium text-[16px] text-[#1F2937]"
             >
               <p>Total:</p>
-              <p>$ <span id="total-amount">1000</span></p>
+              <p>$ <span id="total-amount"></span></p>
             </div>
           </div>
         </div>
@@ -159,7 +161,9 @@
         </h2>
         <div class="grid grid-cols-1 lg:grid-cols-6">
           <div class="lg:col-span-1"></div>
-          <div class="lg:col-span-4 flex flex-col lg:flex-row items-center gap-[30px] px-10 lg:px-[88px]">
+          <div
+            class="lg:col-span-4 flex flex-col lg:flex-row items-center gap-[30px] px-10 lg:px-[88px]"
+          >
             <img
               class="h-[530px] w-[530px]"
               src="./assets/about.png"
@@ -189,7 +193,9 @@
         >
           Our Impact
         </h2>
-        <div class="impact-container flex flex-col lg:flex-row justify-center items-center gap-10">
+        <div
+          class="impact-container flex flex-col lg:flex-row justify-center items-center gap-10"
+        >
           <div
             class="impact-card bg-white p-[40px] rounded-xl w-[300px] lg:w-[430px] flex flex-col justify-center items-center"
           >
@@ -218,25 +224,48 @@
           </div>
         </div>
       </section>
-      <section class="w-full bg-[#166534] py-15 flex flex-col justify-center items-center">
-        <h2 class="pb-5 text-center inter font-semibold text-[24px] lg:text-[32px] text-white">
+      <section
+        class="w-full bg-[#166534] py-15 flex flex-col justify-center items-center"
+      >
+        <h2
+          class="pb-5 text-center inter font-semibold text-[24px] lg:text-[32px] text-white"
+        >
           Plant a Tree Today
         </h2>
-        <form class="p-[20px] lg:p-[40px] w-[380px] lg:w-[650px] flex flex-col bg-[#15803D] rounded-xl">
+        <form
+          class="p-[20px] lg:p-[40px] w-[380px] lg:w-[650px] flex flex-col bg-[#15803D] rounded-xl"
+        >
           <fieldset class="space-y-3">
             <label for="name"></label>
-            <input type="text" name="name" id="name" placeholder="You Name" class="inter font-normal text-[16px] text-[#1F2937] w-full bg-white p-2 rounded-lg outline-none border-none" />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="You Name"
+              class="inter font-normal text-[16px] text-[#1F2937] w-full bg-white p-2 rounded-lg outline-none border-none"
+            />
             <label for="email"></label>
-            <input type="email" name="email" id="email" placeholder="You Email Address" class="inter font-normal text-[16px] text-[#1F2937] w-full bg-white p-2 rounded-lg outline-none border-none" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="You Email Address"
+              class="inter font-normal text-[16px] text-[#1F2937] w-full bg-white p-2 rounded-lg outline-none border-none"
+            />
             <label for="quantity"></label>
-            <select name="quantity" id="quantity" class="inter font-normal text-[16px] text-[#1F2937] w-full bg-white p-2 rounded-lg outline-none border-none">
+            <select
+              name="quantity"
+              id="quantity"
+              class="inter font-normal text-[16px] text-[#1F2937] w-full bg-white p-2 rounded-lg outline-none border-none"
+            >
               <option value="0">Number of Trees</option>
               <option value="5">5 Trees</option>
               <option value="10">10 Trees</option>
               <option value="20">20 Trees</option>
               <option value="50">50 Trees</option>
             </select>
-            <a href="#"
+            <a
+              href="#"
               class="btn rounded-4xl bg-[#FACC15] hover:bg-[#FACC15]/85 text-[#15803D] border-none w-full inter font-medium text-[16px]"
               >Donate Now</a
             >
@@ -244,8 +273,10 @@
         </form>
       </section>
     </main>
-    <footer class="h-[72px] w-full bg-[#14532D] flex justify-center items-center text-white">
-        <p>&copy;&nbsp;2025 Green Earth. All Rights Reserved.</p>
+    <footer
+      class="h-[72px] w-full bg-[#14532D] flex justify-center items-center text-white"
+    >
+      <p>&copy;&nbsp;2025 Green Earth. All Rights Reserved.</p>
     </footer>
 
     <!-- Script -->
